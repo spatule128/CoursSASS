@@ -6,3 +6,158 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+*
+{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color : #777;
+}
+
+.header
+{
+    height : 95vh;
+    background-image:linear-gradient(to right bottom ,rgb(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url(../img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0 , 100% 70%, 0 100%);
+	position : relative;
+}
+
+.logo_box
+{
+	position : absolute;
+	top : 40px;
+	left : 40px;
+}
+
+.logo
+{
+	height : 35px;
+}
+
+.heading_primary
+{
+	color : #fff;
+	text-transform : uppercase;
+	width : 600px;
+	position : relative;
+}
+
+.heading_primary_main
+{
+	display : inline-block;
+	font-size : 60px;
+	font-weight : 400;
+	display : block;
+	letter-spacing : 35px;
+	margin-left: 0.7cm; 
+	animation-name : moveInLeft;
+	animation-duration : 1s;
+	animation-timing-function : ease-out;
+}
+
+.heading_primary_sub
+{
+	display : inline-block;
+	font-size : 20px;
+	font-weight : 700;
+	letter-spacing : 15px;
+	text-align : center;
+	animation-name : moveInRight;
+	animation-duration : 1s;
+	margin-bottom : 1cm;
+}
+
+.text_box
+{
+	width : 600px;
+	position : absolute;
+	top : 40%;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	text-align : center;
+}
+
+
+@keyframes moveInLeft
+{
+	0% 
+	{
+		opacity : 0;
+		transform : translateX(-3cm);
+	}
+	
+	80%
+	{
+		transform : translateX(0.5cm);
+	}
+	
+	100%
+	{
+		opacity : 1;
+		transform : translateX(0cm);
+	}
+}
+
+@keyframes moveInRight
+{
+	0% 
+	{
+		opacity : 0;
+		transform : translateX(3cm);
+	}
+	
+	80%
+	{
+		transform : translateX(-0.5cm);
+	}
+	
+	100%
+	{
+		opacity : 1;
+		transform : translateX(0cm);
+	}
+}
+
+.btn 
+{
+	display : inline-block;
+	border-radius : 100px;
+	transition : all .2s;
+}
+
+.btn:link,
+.btn:visited
+{
+	text-transform : uppercase;
+	text-decoration : none;
+	padding : 15px  40px;
+}
+
+
+.btn:hover
+{
+	transform : translateY(-0.1cm);
+}
+
+.btn:active
+{
+	transform : translateY(-0.03cm);
+	box-shadow : 0 0.08cm 0.08cm rgba(0, 0, 0, 0.2);
+}
+
+.btn_white
+{
+	background-color : #FFF;
+	color : #777;
+}
